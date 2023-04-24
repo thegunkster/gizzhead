@@ -53,8 +53,8 @@ body {
   position: absolute;
   top: 30px;
   left: 30px;
-  width: 100px; /* set the width of the image container */
-  height: 200px; /* set the height of the image container */
+  width: 60px; /* set the width of the image container */
+  height: 250px; /* set the height of the image container */
   background-color: #fff;
   border: 2px solid #000;
   padding: 10px;
