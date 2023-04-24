@@ -11,6 +11,7 @@
 			font-weight: bold;
 			text-align: center;
 			margin: 50px auto;
+			color: white; /* Adding a color to the text to make it visible */
 		}
 
 		/* Styling for the background element */
@@ -29,6 +30,7 @@
 		@keyframes move-up {
 			from { background-position: 0 0; }
 			to { background-position: 0 -100%; }
+			100% { background-position: 0 0; } /* Adding a keyframe at 100% to reset the background position */
 		}
 	</style>
 </head>
@@ -37,10 +39,10 @@
 	<div id="background"></div>
 	<div class="content">
 		<!-- Rotating text element -->
-		<h1 style="color:white;">This site is 2% complete</h1>
+		<h1 id="rotating-text">This site is 2% complete</h1>
 		<div id="rotating-text"></div>
 	</div>
-	<!-- JavaScript code that rotates the text element every second -->
+	<!-- JavaScript code that rotates the text element every 2 seconds -->
 	<script>
 		var rotatingText = document.getElementById("rotating-text");
 		var textArray = ["First text", "Second text", "Third text"];
@@ -54,7 +56,7 @@
 			}
 		}
 
-		setInterval(rotateText, 1);
+		setInterval(rotateText, 2000);
 	</script>
 </body>
 </html>
