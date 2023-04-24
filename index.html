@@ -11,7 +11,9 @@
 			font-weight: bold;
 			text-align: center;
 			margin: 50px auto;
-			color: white; /* Adding a color to the text to make it visible */
+			position: relative;
+			z-index: 1; /* Ensures the text is displayed above the background */
+			color: white;
 		}
 
 		/* Styling for the background element */
@@ -23,14 +25,13 @@
 			height: 100%;
 			background-image: url('weezer.jpg'); /* URL for the background image */
 			background-position: 0 0;
-			animation: move-up 1s linear infinite; /* Animation applied to the background */
+			animation: move-up 10s linear infinite; /* Changed animation timing to 10 seconds */
 		}
 
 		/* Keyframe animation for the background element */
 		@keyframes move-up {
 			from { background-position: 0 0; }
-			to { background-position: 0 -100%; }
-			100% { background-position: 0 0; } /* Adding a keyframe at 100% to reset the background position */
+			to { background-position: 0 -200%; } /* Changed distance moved to -200% to ensure the background fully loops */
 		}
 	</style>
 </head>
@@ -40,7 +41,6 @@
 	<div class="content">
 		<!-- Rotating text element -->
 		<h1 id="rotating-text">This site is 2% complete</h1>
-		<div id="rotating-text"></div>
 	</div>
 	<!-- JavaScript code that rotates the text element every 2 seconds -->
 	<script>
