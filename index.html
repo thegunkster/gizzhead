@@ -1,12 +1,51 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>gizzhead</title>
-    <link rel="stylesheet" href="style.css">
+	<title>gizzhead</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		#rotating-text {
+			font-size: 24px;
+			font-weight: bold;
+			text-align: center;
+			margin: 50px auto;
+		}
+		#background {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url('image_2023-04-07_115646024.png');
+			background-position: 0 0;
+			animation: move-up 10s linear infinite;
+		}
+		@keyframes move-up {
+			from { background-position: 0 0; }
+			to { background-position: 0 -100%; }
+		}
+	</style>
 </head>
 <body>
-    <div class="content">
-        <h1 style="color:white;"> this site is 1.34% complete</h1>
-    </div>
+	<div id="background"></div>
+	<div class="content">
+		<h1 style="color:white;">This site is 2% complete</h1>
+		<div id="rotating-text"></div>
+	</div>
+	<script>
+		var rotatingText = document.getElementById("rotating-text");
+		var textArray = ["First text", "Second text", "Third text"];
+		var currentIndex = 0;
+
+		function rotateText() {
+			rotatingText.innerHTML = textArray[currentIndex];
+			currentIndex++;
+			if (currentIndex >= textArray.length) {
+				currentIndex = 0;
+			}
+		}
+
+		setInterval(rotateText, 2000);
+	</script>
 </body>
 </html>
