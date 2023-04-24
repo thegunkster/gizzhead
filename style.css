@@ -1,18 +1,14 @@
-html {full.png
-    background-image: url();
-    background-size: 20%;
-
-    width: 100%;
-    height: 100%;
-}
-
 body {
+  background-image: url('full.png');
+  background-size: 20%;
+
   width: 100%;
   height: 100%;
-  position: relative;
 
   margin: 0;
   padding: 0;
+
+  position: relative;
 }
 
 .content {
