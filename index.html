@@ -12,7 +12,7 @@
 			text-align: center;
 			margin: 50px auto;
 			position: relative;
-			z-index: 1; /* Ensures the text is displayed above the background */
+			z-index: 1;
 			color: white;
 		}
 
@@ -25,13 +25,14 @@
 			height: 100%;
 			background-image: url('weezer.jpg'); /* URL for the background image */
 			background-position: 0 0;
-			animation: move-up 10s linear infinite; /* Changed animation timing to 10 seconds */
+			animation: move-up 20s linear infinite; /* Animation applied to the background */
+			z-index: 0;
 		}
 
 		/* Keyframe animation for the background element */
 		@keyframes move-up {
 			from { background-position: 0 0; }
-			to { background-position: 0 -200%; } /* Changed distance moved to -200% to ensure the background fully loops */
+			to { background-position: 0 -100%; }
 		}
 	</style>
 </head>
@@ -45,7 +46,7 @@
 	<!-- JavaScript code that rotates the text element every 2 seconds -->
 	<script>
 		var rotatingText = document.getElementById("rotating-text");
-		var textArray = ["click to add text", "This site is 2% complete", "This site is 2% complete"];
+		var textArray = ["First text", "Second text", "Third text"];
 		var currentIndex = 0;
 
 		function rotateText() {
