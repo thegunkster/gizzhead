@@ -11,9 +11,6 @@
 			font-weight: bold;
 			text-align: center;
 			margin: 50px auto;
-			position: relative;
-			z-index: 1;
-			color: white;
 		}
 
 		/* Styling for the background element */
@@ -25,14 +22,35 @@
 			height: 100%;
 			background-image: url('weezer.jpg'); /* URL for the background image */
 			background-position: 0 0;
-			animation: move-up 20s linear infinite; /* Animation applied to the background */
-			z-index: 0;
+			animation: move-up 1s linear infinite; /* Animation applied to the background */
 		}
 
 		/* Keyframe animation for the background element */
 		@keyframes move-up {
 			from { background-position: 0 0; }
 			to { background-position: 0 -100%; }
+		}
+
+		/* Styling for the image container */
+		#image-container {
+			position: absolute;
+			top: 30px;
+			left: 30px;
+			width: calc(33.33% - 60px);
+			height: calc(100% - 60px);
+			background-color: #fff;
+			border: 2px solid #000;
+			padding: 10px;
+			box-sizing: border-box;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		/* Styling for the image */
+		#image-container img {
+			max-width: 100%;
+			max-height: 100%;
 		}
 	</style>
 </head>
@@ -41,9 +59,14 @@
 	<div id="background"></div>
 	<div class="content">
 		<!-- Rotating text element -->
-		<h1 id="rotating-text">This site is 2% complete</h1>
+		<h1 style="color:white;">This site is 2% complete</h1>
+		<div id="rotating-text"></div>
 	</div>
-	<!-- JavaScript code that rotates the text element every 2 seconds -->
+	<!-- Image container that displays the cycling images -->
+	<div id="image-container">
+		<img id="image" src="bog1.png">
+	</div>
+	<!-- JavaScript code that rotates the text element every 2 seconds and cycles through the images when the image container is clicked -->
 	<script>
 		var rotatingText = document.getElementById("rotating-text");
 		var textArray = ["First text", "Second text", "Third text"];
@@ -58,6 +81,22 @@
 		}
 
 		setInterval(rotateText, 2000);
+
+		var image = document.getElementById("image");
+		var imageSources = ["bog1.png", "bog2.png", "bog3.png"];
+		var currentImageIndex = 0;
+
+		function cycleImage() {
+			currentImageIndex++;
+			if (currentImageIndex >= imageSources.length) {
+				currentImageIndex = 0;
+			}
+			image.src = imageSources[currentImageIndex];
+		}
+
+		var imageContainer = document.getElementById("image-container");
+		imageContainer.addEventListener("click", cycleImage);
 	</script>
 </body>
 </html>
+
