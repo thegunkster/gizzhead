@@ -62,16 +62,36 @@
 		<!-- Rotating text element -->
 		<h1 style="color:white;">This site is 15% complete</h1>
 		<div id="rotating-text">Placeholder Text</div>
+		<div id="text-container">Option 1</div>
+
 	</div>
 	<!-- Image container that displays the cycling images -->
 	<div id="image-container">
 		<img id="image" src="bog1.png">
 	</div>
+
 	<!-- JavaScript code that rotates the text element every 2 seconds and cycles through the images when the image container is clicked -->
 	<script>
 		var rotatingText = document.getElementById("rotating-text");
 		var textArray = ["This site is 15% complete", "This site is 16% complete", "This site is 17% complete", "This site is 16% complete", "This site is 15% complete",];
 		var currentIndex = 0;
+		// Define an array with the three options
+		var options = ["Option 1", "Option 2", "Option 3"];
+  
+  // Get the text container element
+  var textContainer = document.getElementById("text-container");
+  
+  // Define a variable to keep track of the current option index
+  var currentOptionIndex = 0;
+  
+  // Add a click event listener to the text container element
+  textContainer.addEventListener("click", function() {
+    // Increment the current option index and wrap around to 0 if it exceeds the array length
+    currentOptionIndex = (currentOptionIndex + 1) % options.length;
+    
+    // Update the text content of the text container element to the new option
+    textContainer.textContent = options[currentOptionIndex];
+  });
 
 		function rotateText() {
 			rotatingText.innerHTML = textArray[currentIndex];
