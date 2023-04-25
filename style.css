@@ -39,21 +39,20 @@ body {
 
 /* Styling for the rotating text element */
 #rotating-text {
-	font-size: 24px;
-	font-weight: bold;
-	position: fixed;
-	top: 30px;
-	right: 30px;
-	color: white;
+  font-size: 24px;
+  font-weight: bold;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  color: white;
 }
-
 
 /* Styling for the image container */
 #image-container {
   position: absolute;
   top: 30px;
   left: 30px;
-  width: 60px; /* set the width of the image container */
+  width: 150px; /* set the width of the image container */
   height: 250px; /* set the height of the image container */
   background-color: #fff;
   border: 2px solid #000;
