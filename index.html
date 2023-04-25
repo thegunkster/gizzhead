@@ -62,9 +62,6 @@
 		<!-- Rotating text element -->
 		<h1 style="color:white;">This site is 15% complete</h1>
 		<div id="rotating-text">Placeholder Text</div>
-		<div id="new-text" class="content">
-			<h2>This is some new text</h2>
-			<p>Click the image container to change the image.</p>
 	</div>
 	<!-- Image container that displays the cycling images -->
 	<div id="image-container">
@@ -102,24 +99,6 @@
 
 		var imageContainer = document.getElementById("image-container");
 		imageContainer.addEventListener("click", cycleImage);
-		var newText = document.getElementById("new-text");
-var newTextHeaders = ["This is some new text", "Here's some other text", "More text to see", "Keep clicking for more images", "The images never end..."];
-var currentTextIndex = 0;
-
-function cycleImage() {
-	currentImageIndex++;
-	if (currentImageIndex >= imageSources.length) {
-		currentImageIndex = 0;
-	}
-	image.src = imageSources[currentImageIndex];
-	
-	newText.innerHTML = "<h2>" + newTextHeaders[currentTextIndex] + "</h2>";
-	currentTextIndex++;
-	if (currentTextIndex >= newTextHeaders.length) {
-		currentTextIndex = 0;
-	}
-}
-
 	</script>
 </body>
 </html>
