@@ -28,7 +28,7 @@ body {
   background-image: url('weezer.jpg');
   background-size: 20%;
   background-position: 0 0;
-  animation: move-up 1s linear infinite;
+  animation: move-up 10s linear infinite;
 }
 
 /* Keyframe animation for the background element */
