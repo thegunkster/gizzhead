@@ -1,5 +1,16 @@
 body {
   background-image: url('weezer.jpg');
   background-repeat: repeat;
+  background-attachment: fixed;
   height: 100%;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -2000px;
+  }
 }
