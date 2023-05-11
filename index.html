@@ -2,40 +2,40 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Goobermobile</title>
-    <meta name="description" content="Goobertown">
-    <link rel="stylesheet" href="style.css">
+    <title>Goobermobile</title>  <!-- Title of the web page -->
+    <meta name="description" content="Goobertown">  <!-- Description of the web page -->
+    <link rel="stylesheet" href="style.css">  <!-- Link to an external CSS file for styling -->
   </head>
   <body>
     <div class="container">
-      <img src="bog1.png" id="myImage" onclick="changeImage()">
-      <h1>placeholder text</h1>
-      <p>team fortress 2</p>
-      <p><a href="https://steamcommunity.com/id/teamfortress2official" target="_blank">big steam</a></p>
+      <img src="bog1.png" id="myImage" onclick="changeImage()">  <!-- An image that is clickable and triggers a function on click -->
+      <h1>placeholder text</h1>  <!-- A main heading for the web page -->
+      <p>team fortress 2</p>  <!-- A paragraph of text on the web page -->
+      <p><a href="https://steamcommunity.com/id/teamfortress2official" target="_blank">big steam</a></p>  <!-- A hyperlink that opens in a new tab -->
     </div>
     
     <script>
-      var imageIndex = 1;
-      function changeImage() {
-        var image = document.getElementById("myImage");
-        imageIndex++;
-        if (imageIndex > 3) {
+      var imageIndex = 1;  // A variable to keep track of the current image index
+      function changeImage() {  // A function that changes the image on click
+        var image = document.getElementById("myImage");  // Get the image element from the DOM
+        imageIndex++;  // Increment the image index
+        if (imageIndex > 3) {  // If the index is greater than 3, reset it to 1
           imageIndex = 1;
         }
-        image.src = "bog" + imageIndex + ".png";
+        image.src = "bog" + imageIndex + ".png";  // Set the image source based on the current index
       }
     </script>
     
     <style>
       body {
-        background-image: url('weezer.jpg');
-        background-repeat: repeat;
-        background-attachment: fixed;
-        height: 100%;
-        animation: scroll 20s linear infinite;
+        background-image: url('weezer.jpg');  /* Set the background image of the web page */
+        background-repeat: repeat;  /* Repeat the background image */
+        background-attachment: fixed;  /* Fix the background image in place */
+        height: 100%;  /* Set the height of the body to 100% */
+        animation: scroll 20s linear infinite;  /* Animate the background image using CSS keyframes */
       }
 
-      @keyframes scroll {
+      @keyframes scroll {  /* Define the keyframes for the background image animation */
         from {
           background-position: 0 0;
         }
@@ -45,27 +45,27 @@
       }
 
       .container {
-  max-width: calc(33.33% - 40px);
-  margin: 20px;
-  text-align: center;
-  padding: 20px;
-  background-color: #E7426E;
-  float: left;
-  box-sizing: border-box;
-}
-
+        max-width: calc(33.33% - 40px);  /* Set the maximum width of the container to 33.33% of the viewport width minus 40 pixels */
+        margin: 20px;  /* Add a margin of 20 pixels around the container */
+        text-align: center;  /* Center the content inside the container */
+        padding: 20px;  /* Add a padding of 20 pixels inside the container */
+        background-color: #E7426E;  /* Set the background color of the container to a shade of pink */
+        float: left;  /* Float the container to the left */
+        box-sizing: border-box;  /* Include padding and border in the element's total width and height */
+      }
 
       img {
-        max-width: 100%;
+        max-width: 100%;  /* Set the maximum width of the image to 100% of its container */
       }
 
       h1 {
-        font-size: 36px;
-        margin-top: 0;
+        font-size: 36px;  /* Set the font size of the main heading to 36 pixels */
+        margin-top: 0;  /* Remove the top margin of the main heading */
       }
 
+
       p {
-        font-size: 24px;
+        font-size: 24px;  /* Set the font size of another, less important text to 24 pixels*/
       }
     </style>
   </body>
