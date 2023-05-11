@@ -2,17 +2,67 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>goobermobile</title>
+    <title>Goobermobile</title>
+    <meta name="description" content="Goobertown">
     <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <img src="bog1.png" id="myImage" onclick="changeImage()">
+      <h1>Welcome to Goobermobile</h1>
+      <p>This is a website for Goobertown.</p>
+    </div>
+    
+    <script>
+      var imageIndex = 1;
+      function changeImage() {
+        var image = document.getElementById("myImage");
+        imageIndex++;
+        if (imageIndex > 3) {
+          imageIndex = 1;
+        }
+        image.src = "bog" + imageIndex + ".png";
+      }
+    </script>
+    
     <style>
       body {
         background-image: url('weezer.jpg');
         background-repeat: repeat;
-		height:100%;
+        background-attachment: fixed;
+        height: 100%;
+        animation: scroll 20s linear infinite;
+      }
+
+      @keyframes scroll {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: 0 -2000px;
+        }
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px;
+        background-color: #ffffff;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-top: 0;
+      }
+
+      p {
+        font-size: 24px;
       }
     </style>
-  </head>
-  <body>
-    
   </body>
 </html>
